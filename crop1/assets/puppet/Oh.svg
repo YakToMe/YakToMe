@@ -1,0 +1,13 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="Oh" style="">
+		<ns0:linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="452.9477" y1="344.2606" x2="451.8192" y2="395.0403">
+			<ns0:stop offset="0" style="stop-color:#000000" />
+			<ns0:stop offset="0.8985" style="stop-color:#5D1E2D" />
+		</ns0:linearGradient>
+		
+			<ns0:path style="display:inline;fill:url(#SVGID_28_);stroke:#000000;stroke-width:2.4998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M475.457,367.635c-1.29,15.668-5.435,29.736-22.124,28.662c-14.134-0.91-24.169-12.9-24.169-28.621s12.097-28.04,26.242-28.749    C475.24,337.932,476.974,349.206,475.457,367.635z" />
+		
+			<ns0:path style="display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:2.4998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M474.277,348.122c-1.422-5.637-7.832-9.106-15.298-9.106s-19.73,4.119-24.5,11.491L474.277,348.122z" />
+	</ns0:g>
+	</ns0:svg>

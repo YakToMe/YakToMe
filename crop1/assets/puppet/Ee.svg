@@ -1,0 +1,20 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="Ee" style="">
+		<ns0:linearGradient id="SVGID_25_" gradientUnits="userSpaceOnUse" x1="432.2895" y1="358.6456" x2="434.5123" y2="386.4313">
+			<ns0:stop offset="0" style="stop-color:#000000" />
+			<ns0:stop offset="0.8985" style="stop-color:#5D1E2D" />
+		</ns0:linearGradient>
+		
+			<ns0:path style="display:inline;fill:url(#SVGID_25_);stroke:#000000;stroke-width:3.3704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M375.271,351.708c9.987,17.92,28.235,28.245,55.475,29.168c25.018,0.848,36.859,0.942,58.052-21.663    C451.529,362.13,411.03,361.593,375.271,351.708z" />
+		
+			<ns0:path style="display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:3.3704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M428.233,339.731c-31.353-2.862-66.319-13.559-66.319-13.559s7.822,16.755,13.357,25.535c30.01,7.226,83.354,11.485,113.851,5.723    c4.653-4.787,6.069-10.258,7.788-13.685c1.039-2.071,8.429-2.245,8.429-2.245S465.371,343.121,428.233,339.731z" />
+		<ns0:g style="display:inline;">
+			<ns0:g>
+				<ns0:path d="M356.826,331.99c3.198-4.027,7.888-6.815,12.548-8.846c3.306-1.44,0.449-6.281-2.835-4.85      c-5.036,2.194-10.23,5.373-13.685,9.724C350.628,330.82,354.577,334.821,356.826,331.99L356.826,331.99z" />
+			</ns0:g>
+		</ns0:g>
+		
+			<ns0:path style="display:inline;fill:#BE1E2D;stroke:#000000;stroke-width:3.3704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M445.344,368.552c4.204,0.991,9.682,3.744,11.495,7.664c-22.409,10.405-52.35-1.604-52.35-1.604S422.27,363.113,445.344,368.552z" />
+	</ns0:g>
+	</ns0:svg>

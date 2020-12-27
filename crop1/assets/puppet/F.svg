@@ -1,0 +1,13 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="F" style="">
+		<ns0:linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="437.2621" y1="359.4395" x2="438.5937" y2="376.0849">
+			<ns0:stop offset="0" style="stop-color:#000000" />
+			<ns0:stop offset="0.8985" style="stop-color:#5D1E2D" />
+		</ns0:linearGradient>
+		
+			<ns0:path style="display:inline;fill:url(#SVGID_26_);stroke:#000000;stroke-width:3.3704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M406.936,372.798c14.867-9.112,66.382-11.014,74.169-3.404c1.266-0.823-3.02-2.378-2.39-3.311    c1.891-2.796,11.51-0.48,13.748-4.956c-37.27,2.917-74.708,5.729-110.467-4.156c2.5,6.25,25.522,9.44,35.655,10.786    C420.262,368.105,406.729,372.792,406.936,372.798z" />
+		
+			<ns0:path style="display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:3.3704;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M395.5,346c0,0-19.258-0.858-13.023,11.132c30.01,7.226,78.851,9.599,109.348,3.837c3.997-5.276-2.925-12.218-34.825-12.218    S395.5,346,395.5,346z" />
+	</ns0:g>
+	</ns0:svg>

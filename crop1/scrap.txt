@@ -1,0 +1,506 @@
+  void launch( ){
+    
+  }
+  void wordsDetected( ){
+    
+  }
+  
+  void 
+
+
+// we can create the game through a material route (like a dialog box you edit with your voice)
+// when the game is complete then it pop the material route. Provic
+
+// the game should be a widget, with a different wrapper for teacher mode and student mode.
+// teach may want an appbar
+
+// the data model for the student can be simpler, what does that accomplish?
+// we want to transition from student to teach for simplicity & robustness.
+// maybe data takes two inits - a second init when passing into teacher mode for the first time.
+
+  bool logVoice=true;    // log the voice
+  VoiceEngine voice;
+  String assetBundle;    // maybe an object? these assets are not necessarily flutter assets.
+
+
+       Positioned(
+               left: 16,
+               top: 16,
+          child: FloatingActionButton(onPressed: () { Navigator.pop(context); }, child: Icon(Icons.arrow_back))),
+          
+          ])
+
+
+class LearnPage extends StatefulWidget {
+  final GameScript script;
+  LearnPage(this.script);
+  
+  LearnPageState createState() => LearnPageState();
+}
+class LearnPageState extends State<LearnPage> {
+  
+ 
+  @override
+  Widget build(BuildContext context) {
+      return SpeechScreen();
+  }
+  
+}
+
+    bool logVoice=true;    // log the voice
+  VoiceEngine voice;
+  String assetBundle;    // maybe an object? these assets are not necessarily flutter assets.
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
+
+// this creates a 4 choice panel. Each panel is associate with a word
+// call backs for tapping. Each panel can have a success state or active state.
+
+class Duck extends StatefulWidget {
+  final int check;
+  OnTap onTap;
+  Duck(this.check, this.onTap);
+  @override
+  DuckState createState() => DuckState();
+}
+
+typedef void OnTap();
+
+class DuckState extends State<Duck> with TickerProviderStateMixin {
+  AnimationController _controller;
+  double opacity = 1.0;
+  bool check = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller = AnimationController(vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    //if (opacity==0.0) setState(() { opacity=1.0; });
+    if (!check && widget.check != 0) {
+      setState(() {
+        opacity = 0.5;
+      });
+      _controller.forward();
+    }
+    return GestureDetector(
+        onTap: () {
+          widget.onTap();
+        },
+        child: Stack(children: [
+          AnimatedOpacity(
+              opacity: opacity,
+              duration: Duration(milliseconds: 300),
+              child: Image.asset('assets/image/duck.webp')),
+          Center(
+              child: Lottie.asset('assets/checkmark.zip',
+                  controller: _controller, onLoaded: (composition) {
+            // Configure the AnimationController with the duration of the
+            // Lottie file and start the animation.
+            _controller..duration = composition.duration;
+          }, width: 96 * 2.0, height: 96 * 2.0))
+        ]));
+  }
+}
+
+const k16 = 16.0;
+
+class Layout extends StatelessWidget {
+  final List<int> status;
+  final void Function(int) onTap;
+  Layout(this.status, this.onTap);
+
+  Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context);
+
+    double puppetHeight = (mq.size.height / 4);
+    double puppetWidth = 4 / 3 * puppetHeight;
+    double puppetTop = mq.size.height - puppetHeight;
+    double puppetLeft = 0;
+
+    double widthChoice = (mq.size.width - 48) / 2;
+    double heightChoice = (mq.size.height - 48) / 2;
+    double wspace = k16;
+    double hspace = k16;
+    // we want 4:3 pictures with even spacing and a minimum border of 16px.
+    if (widthChoice > 4 / 3 * heightChoice) {
+      // shrink the width to keep aspect ration
+      widthChoice = 4 / 3 * heightChoice;
+      wspace = (mq.size.width - 2 * widthChoice + k16) / 2;
+    } else {
+      heightChoice = 3 / 4 * widthChoice;
+      hspace = (mq.size.height - 2 * heightChoice + k16) / 2;
+    }
+
+    return Container(
+        color: Colors.black,
+        child: Stack(children: [
+          Positioned(
+              left: wspace,
+              top: hspace,
+              child: Duck(status[0], () {
+                onTap(0);
+              }),
+              width: widthChoice,
+              height: heightChoice),
+          Positioned(
+              left: wspace + k16 + widthChoice,
+              top: hspace,
+              child: Duck(status[1], () {
+                onTap(1);
+              }),
+              width: widthChoice,
+              height: heightChoice),
+          Positioned(
+              left: wspace,
+              top: hspace + k16 + heightChoice,
+              child: Duck(status[2], () {
+                onTap(2);
+              }),
+              width: widthChoice,
+              height: heightChoice),
+          Positioned(
+              left: wspace + k16 + widthChoice,
+              top: hspace + k16 + heightChoice,
+              child: Duck(status[3], () {
+                onTap(3);
+              }),
+              width: widthChoice,
+              height: heightChoice),
+
+        ]));
+  }
+}
+
+
+    double puppetHeight = (mq.size.height / 4);
+    double puppetWidth = 4 / 3 * puppetHeight;
+    double puppetTop = mq.size.height - puppetHeight;
+    double puppetLeft = 0;
+
+//='assets/image/duck.webp',
+// 'assets/checkmark.zip'});
+
+/*
+CustomScrollView(slivers: [
+            SliverGrid(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4),
+                delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                  final imgxx =
+                      FileImage(File(data.imagePath(data.words[index])));
+                  imageCache.evict(imgxx, includeLive: true);
+                  return new Container(
+                    child: Card(
+                        child: Column(children: [
+                      GestureDetector(
+                          onTap: () {
+                            imageCache.evict(imgxx, includeLive: true);
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return SearchPage(index);
+                            }));
+                          },
+                          child: data.hasImage(data.words[index])
+                              ? AspectRatio(
+                                  aspectRatio: 4 / 3,
+                                  child: Image(image: imgxx))
+                              : Text("Loading...")),
+                      SingleChildScrollView(
+                          child: ListTile(
+                              title: Text(
+                                  '${data.multiLabel(data.words[index])}'))),
+                    ])),
+                  );
+                }, childCount: data.words.length))
+          ])),
+*/
+/*
+Scrollbar( 
+            isAlwaysShown: true,
+            //thickness: 48,
+            controller: _scroll,
+            child:ListView.builder(
+            itemCount: data.words.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('${data.words[index]}'),
+                trailing: Icon(Icons.arrow_right),
+                onTap: () { 
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) { return DetailScreen(index);}));
+                 },
+              );
+            }
+          ),
+        ),
+*/
+/*
+Future<T> showSearchR<T>({
+  @required BuildContext context,
+  @required SearchDelegate<T> delegate,
+  String query = '',
+}) {
+  assert(delegate != null);
+  assert(context != null);
+  delegate.query = query ?? delegate.query;
+  delegate._currentBody = _SearchBody.suggestions;
+  return Navigator.of(context).push(_SearchPageRoute<T>(
+    delegate: delegate,
+  ));
+}
+*/
+
+// windows only?
+//import 'package:flutter_audio_desktop/flutter_audio_desktop.dart';
+
+class DbFindList {
+  int wordIndex;
+  DbFindList(this.wordIndex);
+}
+class Word {}
+class Credits {}
+
+  // translations are kept in file store - maybe on the web this will just be a web drive?
+  // indexeddb would be better, could work offline.
+  void loadTranslations(String language) async {}
+      Future<void> loadLanguage(String langx) async {
+        final fn = '$assets/lang/$langx/words.tsv';
+        if (File(fn).existsSync()) {
+          final words = await File(fn).readAsLines();
+          for (var x in words) {
+            final w = x.split('\t');
+            if (w.length >= 2) {
+              _translate['$langx:${w[0]}'] = w[1];
+            }
+          }
+        }
+      }
+
+
+
+    notifyListeners();
+  }
+
+
+  Data() {
+    // what do we need to load for both student and teacher?
+    //load();
+  }
+
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIOverlays([]);
+  gData = Data();
+  runApp(ChangeNotifierProvider(
+      create: (context) => gData,
+      child: App()));
+}
+
+    final mname = _mouthMap.keys.toList();
+
+final mouthChoice =  DropdownButton<String>(
+      value: _mouthName,
+      icon: Icon(Icons.arrow_downward),
+      iconSize: 24,
+      elevation: 16,
+      style: TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          _mouthName = newValue;
+          this.mouth = _mouthName;
+        });
+      },
+      items: mname
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+
+        ElevatedButton(child: Text("Blink"),
+           onPressed: () { 
+             _toBlink();
+            }),
+
+, 
+          mouthChoice
+
+
+  void _signToggle(bool x) {
+    
+    // _showSign.opacity = x?1.0: 0.0;
+    // _noSign.opacity = !x?1.0: 0.0;
+    setState(() => _isSign = x);
+  }
+
+SizedBox(
+          height: 50,
+          width: 150,
+          child: SwitchListTile(
+            title: const Text('Sign'),
+            value: _isSign,
+            onChanged: _signToggle,
+          ))
+
+  String _mouthName = "Smile";
+
+  Node _showSign, _noSign;
+  bool _isSign = false;
+  //Bubbles _bubbles;
+
+  void config(String directory) {
+  }
+  
+  // make a tag speech op, maybe this takes json.
+  void load(List<String> lang, List<SpeechOp> ops) {
+    
+  }
+  
+  // say something pre-cached. this needs to be precached because we are syncing the 
+  // flutter video with the audo produced in the plugin.
+  void play(String tag) {
+    
+  }
+  
+  void detect(String lang, List<String> words, void Function(int progress) fn) {
+    
+  }
+  
+  void cancelDetection(){
+    
+  }
+  
+  
+// add the rive puppet.
+// add the voice engine
+
+// a material route from the teach mode for testing
+// takes a single word, generates 3 distractors and creates a gamescript for the game widget.
+// provides a variety of ux affordances for testing (for now just a back button.)
+class TeacherGame extends StatelessWidget {
+  final GameScript script;
+  TeacherGame(this.script);
+  
+  @override
+  Widget build(BuildContext context) {
+      return LearnPage(script);
+  }
+}
+
+// the student game doesn't take any arguments; it follows the algorithm to pick 
+// where it left off and produce the next challenge.
+class StudentGame extends StatelessWidget {
+  final script = GameScript();
+  
+  @override
+  Widget build(BuildContext context) {
+    return LearnPage(script);
+  }
+  
+  
+}
+
+
+// this is an argument to the the learnpage; sets up the game
+class GameScript {
+  void Function(int) onComplete;  // game is over.
+  
+  List<String> challengeWords;
+  double pickiness;
+  
+}
+
+Text('${data.multiLabel(data.words[index])}')
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Load the animation file from the bundle, note that you could also
+    // download this. The RiveFile just expects a list of bytes.
+    rootBundle.load('assets/truck.riv').then(
+      (data) async {
+        final file = RiveFile();
+        if (file.import(data)) {
+          final artboard = file.mainArtboard;
+          // Add a controller to play back a known animation on the main/default
+          // artboard.We store a reference to it so we can toggle playback.
+          artboard.addController(_controller = SimpleAnimation('bouncing'));
+          setState(() => _riveArtboard = artboard);
+        }
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: _riveArtboard == null? const SizedBox():Rive(artboard: _riveArtboard)),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => setState(() => _controller.isActive = !_controller.isActive),
+        tooltip: isPlaying ? 'Pause' : 'Play',
+        child: Icon(
+          isPlaying ? Icons.pause : Icons.play_arrow,
+        ),
+      ),
+    );
+  }
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+class Bubbles extends SimpleAnimation {
+  Bubbles(): super("bubbles") {
+    isActive = false;
+
+  }
+  
+  start() {
+    instance.animation.fps = 10;
+    instance.time = 0;
+    isActive = true;    
+    //instance.animation.loop = Loop.oneShot;
+  }
+  
+}
+
+        else if ('ShowSign' == component.name) {
+          _showSign = component;
+        }
+        else if ('NoSign' == component.name) {
+          _noSign = component;
+        }
+        

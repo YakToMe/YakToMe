@@ -1,0 +1,20 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="L" style="">
+		<ns0:linearGradient id="SVGID_27_" gradientUnits="userSpaceOnUse" x1="428.7442" y1="345.4045" x2="423.8101" y2="379.4951">
+			<ns0:stop offset="0" style="stop-color:#000000" />
+			<ns0:stop offset="0.8985" style="stop-color:#5D1E2D" />
+		</ns0:linearGradient>
+		
+			<ns0:path style="display:inline;fill:url(#SVGID_27_);stroke:#000000;stroke-width:2.7907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M379.672,324.905c0,0,31.144,13.641,52.704,15.386c22.424,1.815,49.74-4.089,49.74-4.089l-10.019,4.363l-2.789,14.878    l-4.491,1.925c0,0-4.616,17.926-10.482,22.133c-7.232,5.185-27.18,4.35-36.388,1.052    C390.095,370.576,379.672,324.905,379.672,324.905z" />
+		<ns0:g style="display:inline;">
+			<ns0:g>
+				<ns0:path d="M373.226,332.347c2.222-3.992,7.499-6.416,11.17-8.884c2.472-1.661,0.146-5.692-2.348-4.016      c-4.368,2.935-10.188,5.79-12.839,10.552C367.753,332.618,371.769,334.966,373.226,332.347L373.226,332.347z" />
+			</ns0:g>
+		</ns0:g>
+		
+			<ns0:path style="display:inline;fill:#FFFFFF;stroke:#000000;stroke-width:2.7907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M379.672,324.905c0,0,2.74,11.003,5.762,17.98c3.039,7.017,24.977,11.772,48.802,13.925c24.882,2.248,35.499-1.581,35.499-1.581    l4.278-16.469c0,0-15.357,1.934-41.343,0.131C408.541,337.216,379.672,324.905,379.672,324.905z" />
+		
+			<ns0:path style="display:inline;fill:#BE1E2D;stroke:#000000;stroke-width:2.7907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="    M437.867,360.362c20.633-0.195,11.651,20.858,10.466,21.472c-6.623,3.429-23.302,0.693-32.989-2.759    c-2.302-0.82,6.538,2.698,13.112-7.591C431.881,366.123,430.722,360.429,437.867,360.362z" />
+	</ns0:g>
+	</ns0:svg>

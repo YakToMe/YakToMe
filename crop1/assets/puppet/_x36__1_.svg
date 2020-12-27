@@ -1,0 +1,29 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="_x36__1_" style="">
+		<ns0:linearGradient id="_x31__18_" gradientUnits="userSpaceOnUse" x1="502.3192" y1="204.9866" x2="484.8725" y2="212.4638">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle id="_x31__6_" style="display:inline;fill:url(#_x31__18_);fill-opacity:0.6;stroke:#FFFFFF;stroke-width:1.245;stroke-miterlimit:10;" cx="497.721" cy="206.957" r="9.727" />
+		<ns0:linearGradient id="SVGID_39_" gradientUnits="userSpaceOnUse" x1="532.2257" y1="253.3938" x2="516.5231" y2="260.1235">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle style="display:inline;fill:url(#SVGID_39_);fill-opacity:0.6;stroke:#FFFFFF;stroke-miterlimit:10;" cx="528.087" cy="255.168" r="8.754" />
+		<ns0:linearGradient id="SVGID_40_" gradientUnits="userSpaceOnUse" x1="516.4695" y1="303.0347" x2="510.6612" y2="305.524">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle style="display:inline;fill:url(#SVGID_40_);fill-opacity:0.6;stroke:#FFFFFF;stroke-miterlimit:10;" cx="514.939" cy="303.691" r="3.238" />
+		<ns0:linearGradient id="SVGID_41_" gradientUnits="userSpaceOnUse" x1="508.0517" y1="285.1311" x2="496.1736" y2="290.2217">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle style="display:inline;fill:url(#SVGID_41_);fill-opacity:0.6;stroke:#FFFFFF;stroke-miterlimit:10;" cx="504.921" cy="286.473" r="6.622" />
+	</ns0:g>
+	</ns0:svg>

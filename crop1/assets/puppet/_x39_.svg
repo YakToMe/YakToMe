@@ -1,0 +1,17 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" version="1.1" id="Head" x="0px" y="0px" viewBox="0 0 800 600" style="enable-background:new 0 0 800 600;" xml:space="preserve">
+
+	<ns0:g id="_x39_" style="">
+		<ns0:linearGradient id="SVGID_47_" gradientUnits="userSpaceOnUse" x1="536.6085" y1="170.7478" x2="520.9058" y2="177.4775">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle style="display:inline;fill:url(#SVGID_47_);fill-opacity:0.6;stroke:#FFFFFF;stroke-miterlimit:10;" cx="532.47" cy="172.522" r="8.754" />
+		<ns0:linearGradient id="SVGID_48_" gradientUnits="userSpaceOnUse" x1="526.9038" y1="202.9923" x2="511.2012" y2="209.722">
+			<ns0:stop offset="0.1164" style="stop-color:#15FBFF" />
+			<ns0:stop offset="0.9011" style="stop-color:#0096D4" />
+		</ns0:linearGradient>
+		
+			<ns0:circle style="display:inline;fill:url(#SVGID_48_);fill-opacity:0.6;stroke:#FFFFFF;stroke-miterlimit:10;" cx="522.765" cy="204.766" r="8.754" />
+	</ns0:g>
+	</ns0:svg>
